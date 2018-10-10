@@ -1,6 +1,6 @@
 <?php
 
-namespace Softonic\GraphQL\Test;
+namespace Jasonrgd\GraphQL\Test;
 
 use PHPUnit\Framework\TestCase;
 use Jasonrgd\GraphQL\ResponseBuilder;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Softonic\GraphQL\Test;
+namespace Jasonrgd\GraphQL\Test;
 
 use GuzzleHttp\Cookie\CookieJar;
 use PHPUnit\Framework\TestCase;

@@ -19,12 +19,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Softonic\\GraphQL\\": "src/"
+      "Jasonrgd\\GraphQL\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Softonic\\GraphQL\\Test\\": "tests/"
+      "Jasonrgd\\GraphQL\\Test\\": "tests/"
     }
   },
   "scripts": {
