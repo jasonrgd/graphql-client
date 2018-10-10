@@ -15,7 +15,7 @@ Installation
 
 Via composer:
 ```
-composer require softonic/graphql-client
+composer require jasonrgd/graphql-client
 ```
 
 Documentation
