@@ -1,12 +1,12 @@
 {
-  "name": "softonic/graphql-client",
+  "name": "jasonrgd/graphql-client",
   "type": "library",
   "description" : "Softonic GraphQL client",
   "keywords": ["softonic", "oauth2", "graphql", "client"],
   "license": "Apache-2.0",
-  "homepage": "https://github.com/softonic/graphql-client",
+  "homepage": "https://github.com/jasonrgd/graphql-client",
   "support": {
-    "issues": "https://github.com/softonic/graphql-client/issues"
+    "issues": "https://github.com/jasonrgd/graphql-client/issues"
   },
   "require": {
     "php": ">=7.0",

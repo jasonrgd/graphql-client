@@ -3,7 +3,7 @@
 namespace Softonic\GraphQL\Test;
 
 use PHPUnit\Framework\TestCase;
-use Softonic\GraphQL\Client;
+use Jasonrgd\GraphQL\Client;
 
 class ClientTest extends TestCase
 {
@@ -121,7 +121,7 @@ class ClientTest extends TestCase
     {
         $mockResponse = $this->createMock(\Softonic\GraphQL\Response::class);
         $mockHttpResponse = $this->createMock(\Psr\Http\Message\ResponseInterface::class);
-        
+
         $response = [
             'data' => [
                 'program' => [

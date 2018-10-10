@@ -1,6 +1,6 @@
 <?php
 
-namespace Softonic\GraphQL;
+namespace Jasonrgd\GraphQL;
 
 use Psr\Http\Message\ResponseInterface;
 

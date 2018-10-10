@@ -4,7 +4,7 @@ namespace Softonic\GraphQL\Test;
 
 use GuzzleHttp\Cookie\CookieJar;
 use PHPUnit\Framework\TestCase;
-use Softonic\GraphQL\ClientBuilder;
+use Jasonrgd\GraphQL\ClientBuilder;
 
 class ClientBuilderTest extends TestCase
 {

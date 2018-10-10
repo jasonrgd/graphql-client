@@ -3,7 +3,7 @@
 namespace Softonic\GraphQL\Test;
 
 use PHPUnit\Framework\TestCase;
-use Softonic\GraphQL\ResponseBuilder;
+use Jasonrgd\GraphQL\ResponseBuilder;
 
 class ResponseBuilderTest extends TestCase
 {

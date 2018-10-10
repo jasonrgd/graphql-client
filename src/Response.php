@@ -1,6 +1,6 @@
 <?php
 
-namespace Softonic\GraphQL;
+namespace Jasonrgd\GraphQL;
 
 class Response
 {
