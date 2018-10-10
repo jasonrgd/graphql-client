@@ -2,8 +2,8 @@
 
 namespace Jasonrgd\GraphQL\Test;
 
-use PHPUnit\Framework\TestCase;
 use Jasonrgd\GraphQL\ResponseBuilder;
+use PHPUnit\Framework\TestCase;
 
 class ResponseBuilderTest extends TestCase
 {

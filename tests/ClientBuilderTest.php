@@ -3,15 +3,15 @@
 namespace Jasonrgd\GraphQL\Test;
 
 use GuzzleHttp\Cookie\CookieJar;
-use PHPUnit\Framework\TestCase;
 use Jasonrgd\GraphQL\ClientBuilder;
+use PHPUnit\Framework\TestCase;
 
 class ClientBuilderTest extends TestCase
 {
     public function testBuild()
     {
         $client = ClientBuilder::build('http://foo.bar/qux');
-        $this->assertInstanceOf(\Softonic\GraphQL\Client::class, $client);
+        $this->assertInstanceOf(\Jasonrgd\GraphQL\Client::class, $client);
     }
 
     public function testBuildWithGuzzleOptions()
@@ -21,7 +21,7 @@ class ClientBuilderTest extends TestCase
         ];
 
         $client = ClientBuilder::build('http://foo.bar/qux', $guzzleOptions);
-        $this->assertInstanceOf(\Softonic\GraphQL\Client::class, $client);
+        $this->assertInstanceOf(\Jasonrgd\GraphQL\Client::class, $client);
     }
 
     public function testBuildWithOAuth2Provider()
@@ -39,7 +39,7 @@ class ClientBuilderTest extends TestCase
             $mockTokenOptions,
             $mockCache
         );
-        $this->assertInstanceOf(\Softonic\GraphQL\Client::class, $client);
+        $this->assertInstanceOf(\Jasonrgd\GraphQL\Client::class, $client);
     }
 
     public function testBuildWithOAuth2ProviderAndGuzzleOptions()
@@ -62,6 +62,6 @@ class ClientBuilderTest extends TestCase
             $mockCache,
             $guzzleOptions
         );
-        $this->assertInstanceOf(\Softonic\GraphQL\Client::class, $client);
+        $this->assertInstanceOf(\Jasonrgd\GraphQL\Client::class, $client);
     }
 }

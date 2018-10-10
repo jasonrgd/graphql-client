@@ -2,8 +2,8 @@
 
 namespace Jasonrgd\GraphQL\Test;
 
-use PHPUnit\Framework\TestCase;
 use Jasonrgd\GraphQL\Client;
+use PHPUnit\Framework\TestCase;
 
 class ClientTest extends TestCase
 {
@@ -14,7 +14,7 @@ class ClientTest extends TestCase
     public function setUp()
     {
         $this->httpClient = $this->createMock(\GuzzleHttp\ClientInterface::class);
-        $this->mockGraphqlResponseBuilder = $this->createMock(\Softonic\GraphQL\ResponseBuilder::class);
+        $this->mockGraphqlResponseBuilder = $this->createMock(\Jasonrgd\GraphQL\ResponseBuilder::class);
         $this->client = new Client($this->httpClient, $this->mockGraphqlResponseBuilder);
     }
 
@@ -83,7 +83,7 @@ class ClientTest extends TestCase
 
     public function testSimpleQuery()
     {
-        $mockResponse = $this->createMock(\Softonic\GraphQL\Response::class);
+        $mockResponse = $this->createMock(\Jasonrgd\GraphQL\Response::class);
         $mockHttpResponse = $this->createMock(\Psr\Http\Message\ResponseInterface::class);
 
         $response = [
@@ -114,12 +114,12 @@ class ClientTest extends TestCase
             ->willReturn($mockHttpResponse);
 
         $response = $this->client->query($query);
-        $this->assertInstanceOf(\Softonic\GraphQL\Response::class, $response);
+        $this->assertInstanceOf(\Jasonrgd\GraphQL\Response::class, $response);
     }
 
     public function testQueryWithVariables()
     {
-        $mockResponse = $this->createMock(\Softonic\GraphQL\Response::class);
+        $mockResponse = $this->createMock(\Jasonrgd\GraphQL\Response::class);
         $mockHttpResponse = $this->createMock(\Psr\Http\Message\ResponseInterface::class);
 
         $response = [
@@ -155,7 +155,7 @@ class ClientTest extends TestCase
             ->willReturn($mockHttpResponse);
 
         $response = $this->client->query($query, $variables);
-        $this->assertInstanceOf(\Softonic\GraphQL\Response::class, $response);
+        $this->assertInstanceOf(\Jasonrgd\GraphQL\Response::class, $response);
     }
 
     private function getSimpleQuery()
