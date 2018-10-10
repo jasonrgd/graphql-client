@@ -16,25 +16,4 @@ class ClientBuilder
             new \Jasonrgd\GraphQL\ResponseBuilder()
         );
     }
-
-    public static function buildWithOAuth2Provider(
-        string $endpoint,
-        OAuth2Provider $oauthProvider,
-        array $tokenOptions,
-        Cache $cache,
-        array $guzzleOptions = []
-    ): Client {
-        $guzzleOptions = array_merge(['base_uri' => $endpoint], $guzzleOptions);
-
-
-        return new \Jasonrgd\GraphQL\Client(
-            \Softonic\OAuth2\Guzzle\Middleware\ClientBuilder::build(
-                $oauthProvider,
-                $tokenOptions,
-                $cache,
-                $guzzleOptions
-            ),
-            new \Jasonrgd\GraphQL\ResponseBuilder()
-        );
-    }
 }

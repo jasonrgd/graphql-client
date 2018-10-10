@@ -23,45 +23,4 @@ class ClientBuilderTest extends TestCase
         $client = ClientBuilder::build('http://foo.bar/qux', $guzzleOptions);
         $this->assertInstanceOf(\Jasonrgd\GraphQL\Client::class, $client);
     }
-
-    public function testBuildWithOAuth2Provider()
-    {
-        $mockCache = $this->createMock(\Psr\Cache\CacheItemPoolInterface::class);
-        $mockProvider = $this->createMock(\League\OAuth2\Client\Provider\AbstractProvider::class);
-        $mockTokenOptions = [
-            'grant_type' => 'client_credentials',
-            'scope' => 'myscope',
-        ];
-
-        $client = ClientBuilder::buildWithOAuth2Provider(
-            'http://foo.bar/qux',
-            $mockProvider,
-            $mockTokenOptions,
-            $mockCache
-        );
-        $this->assertInstanceOf(\Jasonrgd\GraphQL\Client::class, $client);
-    }
-
-    public function testBuildWithOAuth2ProviderAndGuzzleOptions()
-    {
-        $mockCache = $this->createMock(\Psr\Cache\CacheItemPoolInterface::class);
-        $mockProvider = $this->createMock(\League\OAuth2\Client\Provider\AbstractProvider::class);
-        $mockTokenOptions = [
-            'grant_type' => 'client_credentials',
-            'scope' => 'myscope',
-        ];
-
-        $guzzleOptions = [
-            'cookies' => new CookieJar(),
-        ];
-
-        $client = ClientBuilder::buildWithOAuth2Provider(
-            'http://foo.bar/qux',
-            $mockProvider,
-            $mockTokenOptions,
-            $mockCache,
-            $guzzleOptions
-        );
-        $this->assertInstanceOf(\Jasonrgd\GraphQL\Client::class, $client);
-    }
 }
